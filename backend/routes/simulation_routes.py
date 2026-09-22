@@ -66,6 +66,7 @@ def run_simulation():
             {
                 "status": "success",
                 "metrics": results["metrics"],
+                "daily_frames": results["daily_frames"],
                 "sample_transactions": sample_transactions,
             }
         )

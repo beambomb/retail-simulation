@@ -203,15 +203,59 @@ class SimulationEngine:
 
             daily_revenue = sum(t.total_amount for t in day_transactions)
             daily_errors = sum(1 for t in day_transactions if t.has_error)
-            daily_summaries.append(
+            daily_items = sum(t.item_count for t in day_transactions)
+
+            cashiers_status = [
                 {
-                    "date": current_date.strftime("%Y-%m-%d"),
-                    "transactions": len(day_transactions),
-                    "revenue": daily_revenue,
-                    "errors": daily_errors,
-                    "abandonments": day_abandonments,
+                    "cashier_id": c.cashier_id,
+                    "name": c.name,
+                    "counter_id": c.counter_id,
+                    "experience": c.experience.value,
+                    "shift": c.shift.value,
+                    "tx_processed": shift_stats[c.cashier_id]["tx_count"],
+                    "errors": shift_stats[c.cashier_id]["errors"],
+                    "peak_fatigue": round(shift_stats[c.cashier_id]["peak_fatigue"], 3),
                 }
-            )
+                for c in self.cashiers
+            ]
+
+            day_summary = {
+                "day_number": day_idx + 1,
+                "date": current_date.strftime("%Y-%m-%d"),
+                "is_weekend": is_weekend,
+                "is_payday": is_payday,
+                "revenue": daily_revenue,
+                "transactions": len(day_transactions),
+                "items": daily_items,
+                "errors": daily_errors,
+                "abandonments": day_abandonments,
+                "cashiers_status": cashiers_status,
+                "sample_transactions": [
+                    {
+                        "transaction_id": t.transaction_id,
+                        "timestamp": t.timestamp,
+                        "cashier_id": t.cashier_id,
+                        "customer_id": t.customer_id,
+                        "payment_method": t.payment_method.value,
+                        "total_amount": t.total_amount,
+                        "item_count": t.item_count,
+                        "has_error": t.has_error,
+                        "items": [
+                            {
+                                "sku": it.sku,
+                                "name": it.product_name,
+                                "qty": it.quantity,
+                                "price": it.unit_price,
+                                "is_void": it.is_void,
+                                "error": it.error_type.value,
+                            }
+                            for it in t.items
+                        ],
+                    }
+                    for t in day_transactions[-6:]
+                ],
+            }
+            daily_summaries.append(day_summary)
 
         total_rev = sum(t.total_amount for t in self.transactions)
         total_items = sum(t.item_count for t in self.transactions)
@@ -230,6 +274,7 @@ class SimulationEngine:
             "customer_abandonments": self.customer_abandonments,
             "average_basket_value": round((total_rev / total_tx) if total_tx > 0 else 0.0, 2),
             "daily_summaries": daily_summaries,
+            "daily_frames": daily_summaries,
         }
 
         return {
@@ -237,4 +282,5 @@ class SimulationEngine:
             "shift_logs": self.shift_logs,
             "catalog": self.catalog.get_all(),
             "metrics": metrics,
+            "daily_frames": daily_summaries,
         }

@@ -113,6 +113,39 @@
             </aside>
 
             <div class="main-content">
+                <section class="playback-panel">
+                    <div class="playback-header">
+                        <div class="playback-status">
+                            <span>Discrete Day:</span>
+                            <strong><span id="current-day-label">0</span> / <span id="total-days-label">7</span></strong>
+                            <span>&bull;</span>
+                            <span id="current-date-label">Standby</span>
+                        </div>
+                        <div class="playback-controls">
+                            <button id="btn-play" class="btn btn-primary">Start Simulation</button>
+                            <button id="btn-pause" class="btn btn-secondary" disabled>Pause</button>
+                            <button id="btn-step" class="btn btn-secondary">Next Day</button>
+                            <button id="btn-reset" class="btn btn-secondary">Reset</button>
+                            <div class="speed-control">
+                                <button class="speed-btn active" data-speed="900">1x</button>
+                                <button class="speed-btn" data-speed="400">2x</button>
+                                <button class="speed-btn" data-speed="150">5x</button>
+                                <button class="speed-btn" data-speed="0">Instant</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-track">
+                        <div id="sim-progress-bar" class="progress-bar"></div>
+                    </div>
+                </section>
+
+                <section class="store-floor-section">
+                    <div class="card-header">
+                        <h3>Store Floor & Active Cashier Counters</h3>
+                    </div>
+                    <div id="till-grid" class="till-grid"></div>
+                </section>
+
                 <section class="stats-overview">
                     <div class="stat-card">
                         <div class="stat-title">Total Revenue</div>
@@ -260,6 +293,8 @@
     </div>
 
     <script src="/static/js/api.js"></script>
+    <script src="/static/js/playback.js"></script>
+    <script src="/static/js/store_floor.js"></script>
     <script src="/static/js/charts.js"></script>
     <script src="/static/js/modal.js"></script>
     <script src="/static/js/table.js"></script>

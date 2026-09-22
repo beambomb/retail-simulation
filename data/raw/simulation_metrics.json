@@ -1,28 +1,2426 @@
 {
-  "total_revenue": 19191800.0,
-  "total_transactions": 100,
-  "total_items_sold": 643,
-  "error_transactions": 21,
-  "error_rate_pct": 21.0,
-  "double_scan_count": 1,
-  "typo_sku_count": 12,
-  "void_count": 9,
+  "total_revenue": 17877200.0,
+  "total_transactions": 104,
+  "total_items_sold": 621,
+  "error_transactions": 19,
+  "error_rate_pct": 18.27,
+  "double_scan_count": 0,
+  "typo_sku_count": 8,
+  "void_count": 11,
   "customer_abandonments": 0,
-  "average_basket_value": 191918.0,
+  "average_basket_value": 171896.15,
   "daily_summaries": [
     {
+      "day_number": 1,
       "date": "2026-09-01",
-      "transactions": 50,
-      "revenue": 8921900.0,
+      "is_weekend": false,
+      "is_payday": true,
+      "revenue": 7446300.0,
+      "transactions": 37,
+      "items": 256,
       "errors": 8,
-      "abandonments": 0
+      "abandonments": 0,
+      "cashiers_status": [
+        {
+          "cashier_id": "CSH-001",
+          "name": "Ahmad Fauzi",
+          "counter_id": 1,
+          "experience": "JUNIOR",
+          "shift": "MORNING",
+          "tx_processed": 7,
+          "errors": 1,
+          "peak_fatigue": 0.49
+        },
+        {
+          "cashier_id": "CSH-002",
+          "name": "Siti Rahmawati",
+          "counter_id": 2,
+          "experience": "JUNIOR",
+          "shift": "EVENING",
+          "tx_processed": 13,
+          "errors": 5,
+          "peak_fatigue": 0.66
+        },
+        {
+          "cashier_id": "CSH-003",
+          "name": "Budi Santoso",
+          "counter_id": 3,
+          "experience": "SENIOR",
+          "shift": "MORNING",
+          "tx_processed": 10,
+          "errors": 0,
+          "peak_fatigue": 0.615
+        },
+        {
+          "cashier_id": "CSH-004",
+          "name": "Dewi Lestari",
+          "counter_id": 4,
+          "experience": "SENIOR",
+          "shift": "EVENING",
+          "tx_processed": 7,
+          "errors": 1,
+          "peak_fatigue": 0.57
+        }
+      ],
+      "sample_transactions": [
+        {
+          "transaction_id": "TRX-20260901-000032",
+          "timestamp": "2026-09-01 18:01:14",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00032",
+          "payment_method": "DEBIT",
+          "total_amount": 552100.0,
+          "item_count": 20,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-5001",
+              "name": "Deterjen Rinso Anti Noda 770g",
+              "qty": 3,
+              "price": 23000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5003",
+              "name": "Sabun Cuci Piring Sunlight 650ml",
+              "qty": 2,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 1,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5003",
+              "name": "Sabun Cuci Piring Sunlight 650ml",
+              "qty": 1,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4007",
+              "name": "Minyak Telon My Baby 90ml",
+              "qty": 2,
+              "price": 28000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5002",
+              "name": "Pewangi Pakaian Molto All in 1 720ml",
+              "qty": 1,
+              "price": 24000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1004",
+              "name": "Tepung Terigu Segitiga Biru 1kg",
+              "qty": 3,
+              "price": 13500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1011",
+              "name": "Sarden ABC Saus Tomat 155g",
+              "qty": 1,
+              "price": 12000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1008",
+              "name": "Indomie Goreng Spesial 85g",
+              "qty": 1,
+              "price": 3500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3001",
+              "name": "Air Mineral Aqua 600ml",
+              "qty": 2,
+              "price": 4000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1003",
+              "name": "Gula Pasir Gulaku 1kg",
+              "qty": 2,
+              "price": 17500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4006",
+              "name": "Paseo Facial Tissue 250 Sheets",
+              "qty": 1,
+              "price": 16500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5004",
+              "name": "Pembersih Lantai Super Pell 770ml",
+              "qty": 2,
+              "price": 14500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4001",
+              "name": "Sabun Mandi Lifebuoy Total 10 450ml",
+              "qty": 1,
+              "price": 27500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1002",
+              "name": "Minyak Goreng Bimoli 2L",
+              "qty": 1,
+              "price": 37500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1010",
+              "name": "Sedaap Mie Goreng 90g",
+              "qty": 1,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2001",
+              "name": "Telur Ayam Negeri 1kg",
+              "qty": 1,
+              "price": 31000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1007",
+              "name": "Saus Sambal ABC 335ml",
+              "qty": 2,
+              "price": 17500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1009",
+              "name": "Indomie Kuah Ayam Bawang 69g",
+              "qty": 3,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4002",
+              "name": "Shampoo Sunsilk Black Shine 160ml",
+              "qty": 2,
+              "price": 26000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260901-000033",
+          "timestamp": "2026-09-01 18:30:27",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00033",
+          "payment_method": "CASH",
+          "total_amount": 417800.0,
+          "item_count": 12,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-5005",
+              "name": "Baygon Obat Nyamuk Semprot 600ml",
+              "qty": 2,
+              "price": 42000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 3,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1006",
+              "name": "Kecap Manis Bango 520ml",
+              "qty": 2,
+              "price": 25500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1010",
+              "name": "Sedaap Mie Goreng 90g",
+              "qty": 1,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2001",
+              "name": "Telur Ayam Negeri 1kg",
+              "qty": 2,
+              "price": 31000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5004",
+              "name": "Pembersih Lantai Super Pell 770ml",
+              "qty": 1,
+              "price": 14500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1007",
+              "name": "Saus Sambal ABC 335ml",
+              "qty": 2,
+              "price": 17500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4006",
+              "name": "Paseo Facial Tissue 250 Sheets",
+              "qty": 2,
+              "price": 16500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1009",
+              "name": "Indomie Kuah Ayam Bawang 69g",
+              "qty": 1,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3001",
+              "name": "Air Mineral Aqua 600ml",
+              "qty": 1,
+              "price": 4000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4002",
+              "name": "Shampoo Sunsilk Black Shine 160ml",
+              "qty": 1,
+              "price": 26000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4001",
+              "name": "Sabun Mandi Lifebuoy Total 10 450ml",
+              "qty": 2,
+              "price": 27500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260901-000034",
+          "timestamp": "2026-09-01 19:09:10",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00034",
+          "payment_method": "QRIS",
+          "total_amount": 52400.0,
+          "item_count": 5,
+          "has_error": true,
+          "items": [
+            {
+              "sku": "SKU-1011",
+              "name": "Sarden ABC Saus Tomat 155g",
+              "qty": 2,
+              "price": 12000.0,
+              "is_void": true,
+              "error": "VOID_ITEM"
+            },
+            {
+              "sku": "SKU-3005",
+              "name": "Good Day Moccacino 250ml",
+              "qty": 1,
+              "price": 8000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1008",
+              "name": "Indomie Goreng Spesial 85g",
+              "qty": 1,
+              "price": 3500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1009",
+              "name": "Indomie Kuah Ayam Bawang 69g",
+              "qty": 1,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 2,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3007",
+              "name": "Chitato Sapi Panggang 68g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260901-000035",
+          "timestamp": "2026-09-01 21:08:46",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00035",
+          "payment_method": "QRIS",
+          "total_amount": 81500.0,
+          "item_count": 5,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3010",
+              "name": "SilverQueen Cokelat Mede 58g",
+              "qty": 1,
+              "price": 17000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2008",
+              "name": "Sari Roti Sobek Cokelat",
+              "qty": 1,
+              "price": 19500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 1,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3003",
+              "name": "Teh Pucuk Harum 350ml",
+              "qty": 1,
+              "price": 4500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3007",
+              "name": "Chitato Sapi Panggang 68g",
+              "qty": 2,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260901-000036",
+          "timestamp": "2026-09-01 21:12:31",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00036",
+          "payment_method": "DEBIT",
+          "total_amount": 76000.0,
+          "item_count": 4,
+          "has_error": true,
+          "items": [
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3007",
+              "name": "Chitato Sapi Panggang 68g",
+              "qty": 2,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 1,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2004",
+              "name": "Yakult Pack isi 5",
+              "qty": 2,
+              "price": 11500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5006",
+              "name": "Baterai ABC Alkaline AA 4s",
+              "qty": 2,
+              "price": 21000.0,
+              "is_void": true,
+              "error": "VOID_ITEM"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260901-000037",
+          "timestamp": "2026-09-01 21:54:09",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00037",
+          "payment_method": "CASH",
+          "total_amount": 49000.0,
+          "item_count": 3,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3010",
+              "name": "SilverQueen Cokelat Mede 58g",
+              "qty": 1,
+              "price": 17000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2008",
+              "name": "Sari Roti Sobek Cokelat",
+              "qty": 1,
+              "price": 19500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        }
+      ]
     },
     {
+      "day_number": 2,
       "date": "2026-09-02",
-      "transactions": 50,
-      "revenue": 10269900.0,
-      "errors": 13,
-      "abandonments": 0
+      "is_weekend": false,
+      "is_payday": true,
+      "revenue": 4989100.0,
+      "transactions": 37,
+      "items": 193,
+      "errors": 8,
+      "abandonments": 0,
+      "cashiers_status": [
+        {
+          "cashier_id": "CSH-001",
+          "name": "Ahmad Fauzi",
+          "counter_id": 1,
+          "experience": "JUNIOR",
+          "shift": "MORNING",
+          "tx_processed": 12,
+          "errors": 5,
+          "peak_fatigue": 0.645
+        },
+        {
+          "cashier_id": "CSH-002",
+          "name": "Siti Rahmawati",
+          "counter_id": 2,
+          "experience": "JUNIOR",
+          "shift": "EVENING",
+          "tx_processed": 13,
+          "errors": 3,
+          "peak_fatigue": 0.58
+        },
+        {
+          "cashier_id": "CSH-003",
+          "name": "Budi Santoso",
+          "counter_id": 3,
+          "experience": "SENIOR",
+          "shift": "MORNING",
+          "tx_processed": 5,
+          "errors": 2,
+          "peak_fatigue": 0.46
+        },
+        {
+          "cashier_id": "CSH-004",
+          "name": "Dewi Lestari",
+          "counter_id": 4,
+          "experience": "SENIOR",
+          "shift": "EVENING",
+          "tx_processed": 7,
+          "errors": 0,
+          "peak_fatigue": 0.49
+        }
+      ],
+      "sample_transactions": [
+        {
+          "transaction_id": "TRX-20260902-000069",
+          "timestamp": "2026-09-02 19:30:52",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00069",
+          "payment_method": "CASH",
+          "total_amount": 158900.0,
+          "item_count": 7,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-2004",
+              "name": "Yakult Pack isi 5",
+              "qty": 1,
+              "price": 11500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3006",
+              "name": "Coca Cola 390ml",
+              "qty": 1,
+              "price": 7500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1001",
+              "name": "Beras Pandan Wangi 5kg",
+              "qty": 1,
+              "price": 78500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1006",
+              "name": "Kecap Manis Bango 520ml",
+              "qty": 1,
+              "price": 25500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3008",
+              "name": "Taro Net Seaweed 65g",
+              "qty": 2,
+              "price": 9800.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3002",
+              "name": "Air Mineral Le Minerale 600ml",
+              "qty": 1,
+              "price": 3800.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3007",
+              "name": "Chitato Sapi Panggang 68g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260902-000070",
+          "timestamp": "2026-09-02 19:12:09",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00070",
+          "payment_method": "QRIS",
+          "total_amount": 34900.0,
+          "item_count": 3,
+          "has_error": true,
+          "items": [
+            {
+              "sku": "SKU-1009",
+              "name": "Indomie Kuah Ayam Bawang 69g",
+              "qty": 1,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4201",
+              "name": "UNKNOWN PRODUCT",
+              "qty": 1,
+              "price": 27500.0,
+              "is_void": false,
+              "error": "TYPO_SKU"
+            },
+            {
+              "sku": "SKU-3001",
+              "name": "Air Mineral Aqua 600ml",
+              "qty": 1,
+              "price": 4000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260902-000071",
+          "timestamp": "2026-09-02 20:48:36",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00071",
+          "payment_method": "CASH",
+          "total_amount": 48300.0,
+          "item_count": 6,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3005",
+              "name": "Good Day Moccacino 250ml",
+              "qty": 1,
+              "price": 8000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3006",
+              "name": "Coca Cola 390ml",
+              "qty": 1,
+              "price": 7500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1009",
+              "name": "Indomie Kuah Ayam Bawang 69g",
+              "qty": 2,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1011",
+              "name": "Sarden ABC Saus Tomat 155g",
+              "qty": 1,
+              "price": 12000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1005",
+              "name": "Garam Dapur Cap Kapal 250g",
+              "qty": 1,
+              "price": 5000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3003",
+              "name": "Teh Pucuk Harum 350ml",
+              "qty": 2,
+              "price": 4500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260902-000072",
+          "timestamp": "2026-09-02 20:57:06",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00072",
+          "payment_method": "DEBIT",
+          "total_amount": 33000.0,
+          "item_count": 2,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-2004",
+              "name": "Yakult Pack isi 5",
+              "qty": 1,
+              "price": 11500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2003",
+              "name": "Susu Ultra Milk Cokelat 1L",
+              "qty": 1,
+              "price": 21500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260902-000073",
+          "timestamp": "2026-09-02 20:34:53",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00073",
+          "payment_method": "DEBIT",
+          "total_amount": 21500.0,
+          "item_count": 1,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-2002",
+              "name": "Susu Ultra Milk Full Cream 1L",
+              "qty": 1,
+              "price": 21500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260902-000074",
+          "timestamp": "2026-09-02 20:07:20",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00074",
+          "payment_method": "QRIS",
+          "total_amount": 94000.0,
+          "item_count": 6,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3006",
+              "name": "Coca Cola 390ml",
+              "qty": 2,
+              "price": 7500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1004",
+              "name": "Tepung Terigu Segitiga Biru 1kg",
+              "qty": 1,
+              "price": 13500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 2,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 2,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3003",
+              "name": "Teh Pucuk Harum 350ml",
+              "qty": 1,
+              "price": 4500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1005",
+              "name": "Garam Dapur Cap Kapal 250g",
+              "qty": 1,
+              "price": 5000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "date": "2026-09-03",
+      "is_weekend": false,
+      "is_payday": false,
+      "revenue": 5441800.0,
+      "transactions": 30,
+      "items": 172,
+      "errors": 3,
+      "abandonments": 0,
+      "cashiers_status": [
+        {
+          "cashier_id": "CSH-001",
+          "name": "Ahmad Fauzi",
+          "counter_id": 1,
+          "experience": "JUNIOR",
+          "shift": "MORNING",
+          "tx_processed": 0,
+          "errors": 0,
+          "peak_fatigue": 0.0
+        },
+        {
+          "cashier_id": "CSH-002",
+          "name": "Siti Rahmawati",
+          "counter_id": 2,
+          "experience": "JUNIOR",
+          "shift": "EVENING",
+          "tx_processed": 12,
+          "errors": 1,
+          "peak_fatigue": 0.565
+        },
+        {
+          "cashier_id": "CSH-003",
+          "name": "Budi Santoso",
+          "counter_id": 3,
+          "experience": "SENIOR",
+          "shift": "MORNING",
+          "tx_processed": 7,
+          "errors": 0,
+          "peak_fatigue": 0.57
+        },
+        {
+          "cashier_id": "CSH-004",
+          "name": "Dewi Lestari",
+          "counter_id": 4,
+          "experience": "SENIOR",
+          "shift": "EVENING",
+          "tx_processed": 11,
+          "errors": 1,
+          "peak_fatigue": 0.55
+        }
+      ],
+      "sample_transactions": [
+        {
+          "transaction_id": "TRX-20260903-000099",
+          "timestamp": "2026-09-03 18:23:13",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00099",
+          "payment_method": "DEBIT",
+          "total_amount": 30300.0,
+          "item_count": 3,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3008",
+              "name": "Taro Net Seaweed 65g",
+              "qty": 1,
+              "price": 9800.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3005",
+              "name": "Good Day Moccacino 250ml",
+              "qty": 1,
+              "price": 8000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260903-000100",
+          "timestamp": "2026-09-03 19:29:56",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00100",
+          "payment_method": "DEBIT",
+          "total_amount": 63600.0,
+          "item_count": 5,
+          "has_error": true,
+          "items": [
+            {
+              "sku": "SKU-3007",
+              "name": "Chitato Sapi Panggang 68g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3001",
+              "name": "Air Mineral Aqua 600ml",
+              "qty": 2,
+              "price": 4000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3008",
+              "name": "Taro Net Seaweed 65g",
+              "qty": 2,
+              "price": 9800.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3002",
+              "name": "Air Mineral Le Minerale 600ml",
+              "qty": 1,
+              "price": 3800.0,
+              "is_void": true,
+              "error": "VOID_ITEM"
+            },
+            {
+              "sku": "SKU-3009",
+              "name": "Oreo Original Roll 133g",
+              "qty": 1,
+              "price": 11000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260903-000101",
+          "timestamp": "2026-09-03 19:42:26",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00101",
+          "payment_method": "QRIS",
+          "total_amount": 119600.0,
+          "item_count": 6,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3009",
+              "name": "Oreo Original Roll 133g",
+              "qty": 1,
+              "price": 11000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4006",
+              "name": "Paseo Facial Tissue 250 Sheets",
+              "qty": 1,
+              "price": 16500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1012",
+              "name": "Kornet Sapi Pronas 198g",
+              "qty": 1,
+              "price": 26000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3010",
+              "name": "SilverQueen Cokelat Mede 58g",
+              "qty": 2,
+              "price": 17000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3008",
+              "name": "Taro Net Seaweed 65g",
+              "qty": 2,
+              "price": 9800.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260903-000102",
+          "timestamp": "2026-09-03 20:03:10",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00102",
+          "payment_method": "CASH",
+          "total_amount": 24000.0,
+          "item_count": 1,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-2005",
+              "name": "Keju Kraft Cheddar 165g",
+              "qty": 1,
+              "price": 24000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260903-000103",
+          "timestamp": "2026-09-03 20:23:18",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00103",
+          "payment_method": "CREDIT",
+          "total_amount": 11000.0,
+          "item_count": 1,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3009",
+              "name": "Oreo Original Roll 133g",
+              "qty": 1,
+              "price": 11000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260903-000104",
+          "timestamp": "2026-09-03 20:47:34",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00104",
+          "payment_method": "CASH",
+          "total_amount": 595000.0,
+          "item_count": 10,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 1,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1004",
+              "name": "Tepung Terigu Segitiga Biru 1kg",
+              "qty": 1,
+              "price": 13500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4001",
+              "name": "Sabun Mandi Lifebuoy Total 10 450ml",
+              "qty": 5,
+              "price": 27500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4002",
+              "name": "Shampoo Sunsilk Black Shine 160ml",
+              "qty": 1,
+              "price": 26000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4005",
+              "name": "Rexona Deodorant Roll On 45ml",
+              "qty": 5,
+              "price": 20500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4007",
+              "name": "Minyak Telon My Baby 90ml",
+              "qty": 2,
+              "price": 28000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1001",
+              "name": "Beras Pandan Wangi 5kg",
+              "qty": 2,
+              "price": 78500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1005",
+              "name": "Garam Dapur Cap Kapal 250g",
+              "qty": 2,
+              "price": 5000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1003",
+              "name": "Gula Pasir Gulaku 1kg",
+              "qty": 2,
+              "price": 17500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5006",
+              "name": "Baterai ABC Alkaline AA 4s",
+              "qty": 2,
+              "price": 21000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "daily_frames": [
+    {
+      "day_number": 1,
+      "date": "2026-09-01",
+      "is_weekend": false,
+      "is_payday": true,
+      "revenue": 7446300.0,
+      "transactions": 37,
+      "items": 256,
+      "errors": 8,
+      "abandonments": 0,
+      "cashiers_status": [
+        {
+          "cashier_id": "CSH-001",
+          "name": "Ahmad Fauzi",
+          "counter_id": 1,
+          "experience": "JUNIOR",
+          "shift": "MORNING",
+          "tx_processed": 7,
+          "errors": 1,
+          "peak_fatigue": 0.49
+        },
+        {
+          "cashier_id": "CSH-002",
+          "name": "Siti Rahmawati",
+          "counter_id": 2,
+          "experience": "JUNIOR",
+          "shift": "EVENING",
+          "tx_processed": 13,
+          "errors": 5,
+          "peak_fatigue": 0.66
+        },
+        {
+          "cashier_id": "CSH-003",
+          "name": "Budi Santoso",
+          "counter_id": 3,
+          "experience": "SENIOR",
+          "shift": "MORNING",
+          "tx_processed": 10,
+          "errors": 0,
+          "peak_fatigue": 0.615
+        },
+        {
+          "cashier_id": "CSH-004",
+          "name": "Dewi Lestari",
+          "counter_id": 4,
+          "experience": "SENIOR",
+          "shift": "EVENING",
+          "tx_processed": 7,
+          "errors": 1,
+          "peak_fatigue": 0.57
+        }
+      ],
+      "sample_transactions": [
+        {
+          "transaction_id": "TRX-20260901-000032",
+          "timestamp": "2026-09-01 18:01:14",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00032",
+          "payment_method": "DEBIT",
+          "total_amount": 552100.0,
+          "item_count": 20,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-5001",
+              "name": "Deterjen Rinso Anti Noda 770g",
+              "qty": 3,
+              "price": 23000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5003",
+              "name": "Sabun Cuci Piring Sunlight 650ml",
+              "qty": 2,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 1,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5003",
+              "name": "Sabun Cuci Piring Sunlight 650ml",
+              "qty": 1,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4007",
+              "name": "Minyak Telon My Baby 90ml",
+              "qty": 2,
+              "price": 28000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5002",
+              "name": "Pewangi Pakaian Molto All in 1 720ml",
+              "qty": 1,
+              "price": 24000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1004",
+              "name": "Tepung Terigu Segitiga Biru 1kg",
+              "qty": 3,
+              "price": 13500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1011",
+              "name": "Sarden ABC Saus Tomat 155g",
+              "qty": 1,
+              "price": 12000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1008",
+              "name": "Indomie Goreng Spesial 85g",
+              "qty": 1,
+              "price": 3500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3001",
+              "name": "Air Mineral Aqua 600ml",
+              "qty": 2,
+              "price": 4000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1003",
+              "name": "Gula Pasir Gulaku 1kg",
+              "qty": 2,
+              "price": 17500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4006",
+              "name": "Paseo Facial Tissue 250 Sheets",
+              "qty": 1,
+              "price": 16500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5004",
+              "name": "Pembersih Lantai Super Pell 770ml",
+              "qty": 2,
+              "price": 14500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4001",
+              "name": "Sabun Mandi Lifebuoy Total 10 450ml",
+              "qty": 1,
+              "price": 27500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1002",
+              "name": "Minyak Goreng Bimoli 2L",
+              "qty": 1,
+              "price": 37500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1010",
+              "name": "Sedaap Mie Goreng 90g",
+              "qty": 1,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2001",
+              "name": "Telur Ayam Negeri 1kg",
+              "qty": 1,
+              "price": 31000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1007",
+              "name": "Saus Sambal ABC 335ml",
+              "qty": 2,
+              "price": 17500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1009",
+              "name": "Indomie Kuah Ayam Bawang 69g",
+              "qty": 3,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4002",
+              "name": "Shampoo Sunsilk Black Shine 160ml",
+              "qty": 2,
+              "price": 26000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260901-000033",
+          "timestamp": "2026-09-01 18:30:27",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00033",
+          "payment_method": "CASH",
+          "total_amount": 417800.0,
+          "item_count": 12,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-5005",
+              "name": "Baygon Obat Nyamuk Semprot 600ml",
+              "qty": 2,
+              "price": 42000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 3,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1006",
+              "name": "Kecap Manis Bango 520ml",
+              "qty": 2,
+              "price": 25500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1010",
+              "name": "Sedaap Mie Goreng 90g",
+              "qty": 1,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2001",
+              "name": "Telur Ayam Negeri 1kg",
+              "qty": 2,
+              "price": 31000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5004",
+              "name": "Pembersih Lantai Super Pell 770ml",
+              "qty": 1,
+              "price": 14500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1007",
+              "name": "Saus Sambal ABC 335ml",
+              "qty": 2,
+              "price": 17500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4006",
+              "name": "Paseo Facial Tissue 250 Sheets",
+              "qty": 2,
+              "price": 16500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1009",
+              "name": "Indomie Kuah Ayam Bawang 69g",
+              "qty": 1,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3001",
+              "name": "Air Mineral Aqua 600ml",
+              "qty": 1,
+              "price": 4000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4002",
+              "name": "Shampoo Sunsilk Black Shine 160ml",
+              "qty": 1,
+              "price": 26000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4001",
+              "name": "Sabun Mandi Lifebuoy Total 10 450ml",
+              "qty": 2,
+              "price": 27500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260901-000034",
+          "timestamp": "2026-09-01 19:09:10",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00034",
+          "payment_method": "QRIS",
+          "total_amount": 52400.0,
+          "item_count": 5,
+          "has_error": true,
+          "items": [
+            {
+              "sku": "SKU-1011",
+              "name": "Sarden ABC Saus Tomat 155g",
+              "qty": 2,
+              "price": 12000.0,
+              "is_void": true,
+              "error": "VOID_ITEM"
+            },
+            {
+              "sku": "SKU-3005",
+              "name": "Good Day Moccacino 250ml",
+              "qty": 1,
+              "price": 8000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1008",
+              "name": "Indomie Goreng Spesial 85g",
+              "qty": 1,
+              "price": 3500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1009",
+              "name": "Indomie Kuah Ayam Bawang 69g",
+              "qty": 1,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 2,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3007",
+              "name": "Chitato Sapi Panggang 68g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260901-000035",
+          "timestamp": "2026-09-01 21:08:46",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00035",
+          "payment_method": "QRIS",
+          "total_amount": 81500.0,
+          "item_count": 5,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3010",
+              "name": "SilverQueen Cokelat Mede 58g",
+              "qty": 1,
+              "price": 17000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2008",
+              "name": "Sari Roti Sobek Cokelat",
+              "qty": 1,
+              "price": 19500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 1,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3003",
+              "name": "Teh Pucuk Harum 350ml",
+              "qty": 1,
+              "price": 4500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3007",
+              "name": "Chitato Sapi Panggang 68g",
+              "qty": 2,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260901-000036",
+          "timestamp": "2026-09-01 21:12:31",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00036",
+          "payment_method": "DEBIT",
+          "total_amount": 76000.0,
+          "item_count": 4,
+          "has_error": true,
+          "items": [
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3007",
+              "name": "Chitato Sapi Panggang 68g",
+              "qty": 2,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 1,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2004",
+              "name": "Yakult Pack isi 5",
+              "qty": 2,
+              "price": 11500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5006",
+              "name": "Baterai ABC Alkaline AA 4s",
+              "qty": 2,
+              "price": 21000.0,
+              "is_void": true,
+              "error": "VOID_ITEM"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260901-000037",
+          "timestamp": "2026-09-01 21:54:09",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00037",
+          "payment_method": "CASH",
+          "total_amount": 49000.0,
+          "item_count": 3,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3010",
+              "name": "SilverQueen Cokelat Mede 58g",
+              "qty": 1,
+              "price": 17000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2008",
+              "name": "Sari Roti Sobek Cokelat",
+              "qty": 1,
+              "price": 19500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "date": "2026-09-02",
+      "is_weekend": false,
+      "is_payday": true,
+      "revenue": 4989100.0,
+      "transactions": 37,
+      "items": 193,
+      "errors": 8,
+      "abandonments": 0,
+      "cashiers_status": [
+        {
+          "cashier_id": "CSH-001",
+          "name": "Ahmad Fauzi",
+          "counter_id": 1,
+          "experience": "JUNIOR",
+          "shift": "MORNING",
+          "tx_processed": 12,
+          "errors": 5,
+          "peak_fatigue": 0.645
+        },
+        {
+          "cashier_id": "CSH-002",
+          "name": "Siti Rahmawati",
+          "counter_id": 2,
+          "experience": "JUNIOR",
+          "shift": "EVENING",
+          "tx_processed": 13,
+          "errors": 3,
+          "peak_fatigue": 0.58
+        },
+        {
+          "cashier_id": "CSH-003",
+          "name": "Budi Santoso",
+          "counter_id": 3,
+          "experience": "SENIOR",
+          "shift": "MORNING",
+          "tx_processed": 5,
+          "errors": 2,
+          "peak_fatigue": 0.46
+        },
+        {
+          "cashier_id": "CSH-004",
+          "name": "Dewi Lestari",
+          "counter_id": 4,
+          "experience": "SENIOR",
+          "shift": "EVENING",
+          "tx_processed": 7,
+          "errors": 0,
+          "peak_fatigue": 0.49
+        }
+      ],
+      "sample_transactions": [
+        {
+          "transaction_id": "TRX-20260902-000069",
+          "timestamp": "2026-09-02 19:30:52",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00069",
+          "payment_method": "CASH",
+          "total_amount": 158900.0,
+          "item_count": 7,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-2004",
+              "name": "Yakult Pack isi 5",
+              "qty": 1,
+              "price": 11500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3006",
+              "name": "Coca Cola 390ml",
+              "qty": 1,
+              "price": 7500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1001",
+              "name": "Beras Pandan Wangi 5kg",
+              "qty": 1,
+              "price": 78500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1006",
+              "name": "Kecap Manis Bango 520ml",
+              "qty": 1,
+              "price": 25500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3008",
+              "name": "Taro Net Seaweed 65g",
+              "qty": 2,
+              "price": 9800.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3002",
+              "name": "Air Mineral Le Minerale 600ml",
+              "qty": 1,
+              "price": 3800.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3007",
+              "name": "Chitato Sapi Panggang 68g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260902-000070",
+          "timestamp": "2026-09-02 19:12:09",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00070",
+          "payment_method": "QRIS",
+          "total_amount": 34900.0,
+          "item_count": 3,
+          "has_error": true,
+          "items": [
+            {
+              "sku": "SKU-1009",
+              "name": "Indomie Kuah Ayam Bawang 69g",
+              "qty": 1,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4201",
+              "name": "UNKNOWN PRODUCT",
+              "qty": 1,
+              "price": 27500.0,
+              "is_void": false,
+              "error": "TYPO_SKU"
+            },
+            {
+              "sku": "SKU-3001",
+              "name": "Air Mineral Aqua 600ml",
+              "qty": 1,
+              "price": 4000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260902-000071",
+          "timestamp": "2026-09-02 20:48:36",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00071",
+          "payment_method": "CASH",
+          "total_amount": 48300.0,
+          "item_count": 6,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3005",
+              "name": "Good Day Moccacino 250ml",
+              "qty": 1,
+              "price": 8000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3006",
+              "name": "Coca Cola 390ml",
+              "qty": 1,
+              "price": 7500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1009",
+              "name": "Indomie Kuah Ayam Bawang 69g",
+              "qty": 2,
+              "price": 3400.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1011",
+              "name": "Sarden ABC Saus Tomat 155g",
+              "qty": 1,
+              "price": 12000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1005",
+              "name": "Garam Dapur Cap Kapal 250g",
+              "qty": 1,
+              "price": 5000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3003",
+              "name": "Teh Pucuk Harum 350ml",
+              "qty": 2,
+              "price": 4500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260902-000072",
+          "timestamp": "2026-09-02 20:57:06",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00072",
+          "payment_method": "DEBIT",
+          "total_amount": 33000.0,
+          "item_count": 2,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-2004",
+              "name": "Yakult Pack isi 5",
+              "qty": 1,
+              "price": 11500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2003",
+              "name": "Susu Ultra Milk Cokelat 1L",
+              "qty": 1,
+              "price": 21500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260902-000073",
+          "timestamp": "2026-09-02 20:34:53",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00073",
+          "payment_method": "DEBIT",
+          "total_amount": 21500.0,
+          "item_count": 1,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-2002",
+              "name": "Susu Ultra Milk Full Cream 1L",
+              "qty": 1,
+              "price": 21500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260902-000074",
+          "timestamp": "2026-09-02 20:07:20",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00074",
+          "payment_method": "QRIS",
+          "total_amount": 94000.0,
+          "item_count": 6,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3006",
+              "name": "Coca Cola 390ml",
+              "qty": 2,
+              "price": 7500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1004",
+              "name": "Tepung Terigu Segitiga Biru 1kg",
+              "qty": 1,
+              "price": 13500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 2,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 2,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3003",
+              "name": "Teh Pucuk Harum 350ml",
+              "qty": 1,
+              "price": 4500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1005",
+              "name": "Garam Dapur Cap Kapal 250g",
+              "qty": 1,
+              "price": 5000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "date": "2026-09-03",
+      "is_weekend": false,
+      "is_payday": false,
+      "revenue": 5441800.0,
+      "transactions": 30,
+      "items": 172,
+      "errors": 3,
+      "abandonments": 0,
+      "cashiers_status": [
+        {
+          "cashier_id": "CSH-001",
+          "name": "Ahmad Fauzi",
+          "counter_id": 1,
+          "experience": "JUNIOR",
+          "shift": "MORNING",
+          "tx_processed": 0,
+          "errors": 0,
+          "peak_fatigue": 0.0
+        },
+        {
+          "cashier_id": "CSH-002",
+          "name": "Siti Rahmawati",
+          "counter_id": 2,
+          "experience": "JUNIOR",
+          "shift": "EVENING",
+          "tx_processed": 12,
+          "errors": 1,
+          "peak_fatigue": 0.565
+        },
+        {
+          "cashier_id": "CSH-003",
+          "name": "Budi Santoso",
+          "counter_id": 3,
+          "experience": "SENIOR",
+          "shift": "MORNING",
+          "tx_processed": 7,
+          "errors": 0,
+          "peak_fatigue": 0.57
+        },
+        {
+          "cashier_id": "CSH-004",
+          "name": "Dewi Lestari",
+          "counter_id": 4,
+          "experience": "SENIOR",
+          "shift": "EVENING",
+          "tx_processed": 11,
+          "errors": 1,
+          "peak_fatigue": 0.55
+        }
+      ],
+      "sample_transactions": [
+        {
+          "transaction_id": "TRX-20260903-000099",
+          "timestamp": "2026-09-03 18:23:13",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00099",
+          "payment_method": "DEBIT",
+          "total_amount": 30300.0,
+          "item_count": 3,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3008",
+              "name": "Taro Net Seaweed 65g",
+              "qty": 1,
+              "price": 9800.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3005",
+              "name": "Good Day Moccacino 250ml",
+              "qty": 1,
+              "price": 8000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260903-000100",
+          "timestamp": "2026-09-03 19:29:56",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00100",
+          "payment_method": "DEBIT",
+          "total_amount": 63600.0,
+          "item_count": 5,
+          "has_error": true,
+          "items": [
+            {
+              "sku": "SKU-3007",
+              "name": "Chitato Sapi Panggang 68g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3001",
+              "name": "Air Mineral Aqua 600ml",
+              "qty": 2,
+              "price": 4000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3008",
+              "name": "Taro Net Seaweed 65g",
+              "qty": 2,
+              "price": 9800.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3002",
+              "name": "Air Mineral Le Minerale 600ml",
+              "qty": 1,
+              "price": 3800.0,
+              "is_void": true,
+              "error": "VOID_ITEM"
+            },
+            {
+              "sku": "SKU-3009",
+              "name": "Oreo Original Roll 133g",
+              "qty": 1,
+              "price": 11000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260903-000101",
+          "timestamp": "2026-09-03 19:42:26",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00101",
+          "payment_method": "QRIS",
+          "total_amount": 119600.0,
+          "item_count": 6,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3009",
+              "name": "Oreo Original Roll 133g",
+              "qty": 1,
+              "price": 11000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4006",
+              "name": "Paseo Facial Tissue 250 Sheets",
+              "qty": 1,
+              "price": 16500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-2006",
+              "name": "Mentega Blue Band 200g",
+              "qty": 1,
+              "price": 12500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1012",
+              "name": "Kornet Sapi Pronas 198g",
+              "qty": 1,
+              "price": 26000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3010",
+              "name": "SilverQueen Cokelat Mede 58g",
+              "qty": 2,
+              "price": 17000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-3008",
+              "name": "Taro Net Seaweed 65g",
+              "qty": 2,
+              "price": 9800.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260903-000102",
+          "timestamp": "2026-09-03 20:03:10",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00102",
+          "payment_method": "CASH",
+          "total_amount": 24000.0,
+          "item_count": 1,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-2005",
+              "name": "Keju Kraft Cheddar 165g",
+              "qty": 1,
+              "price": 24000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260903-000103",
+          "timestamp": "2026-09-03 20:23:18",
+          "cashier_id": "CSH-002",
+          "customer_id": "CUST-00103",
+          "payment_method": "CREDIT",
+          "total_amount": 11000.0,
+          "item_count": 1,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-3009",
+              "name": "Oreo Original Roll 133g",
+              "qty": 1,
+              "price": 11000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        },
+        {
+          "transaction_id": "TRX-20260903-000104",
+          "timestamp": "2026-09-03 20:47:34",
+          "cashier_id": "CSH-004",
+          "customer_id": "CUST-00104",
+          "payment_method": "CASH",
+          "total_amount": 595000.0,
+          "item_count": 10,
+          "has_error": false,
+          "items": [
+            {
+              "sku": "SKU-4004",
+              "name": "Sikat Gigi Formula Double Action 3s",
+              "qty": 1,
+              "price": 15500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1004",
+              "name": "Tepung Terigu Segitiga Biru 1kg",
+              "qty": 1,
+              "price": 13500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4001",
+              "name": "Sabun Mandi Lifebuoy Total 10 450ml",
+              "qty": 5,
+              "price": 27500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4002",
+              "name": "Shampoo Sunsilk Black Shine 160ml",
+              "qty": 1,
+              "price": 26000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4005",
+              "name": "Rexona Deodorant Roll On 45ml",
+              "qty": 5,
+              "price": 20500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-4007",
+              "name": "Minyak Telon My Baby 90ml",
+              "qty": 2,
+              "price": 28000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1001",
+              "name": "Beras Pandan Wangi 5kg",
+              "qty": 2,
+              "price": 78500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1005",
+              "name": "Garam Dapur Cap Kapal 250g",
+              "qty": 2,
+              "price": 5000.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-1003",
+              "name": "Gula Pasir Gulaku 1kg",
+              "qty": 2,
+              "price": 17500.0,
+              "is_void": false,
+              "error": "NONE"
+            },
+            {
+              "sku": "SKU-5006",
+              "name": "Baterai ABC Alkaline AA 4s",
+              "qty": 2,
+              "price": 21000.0,
+              "is_void": false,
+              "error": "NONE"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -75,10 +75,14 @@ Platform simulasi ritel berbasis **Agent-Based Modelling (ABM)** dengan arsitekt
   - **Zero Comments Rule**: 100% kode bersih tanpa baris komentar di seluruh backend, frontend, dan database.
   - Pemisahan tegas struktur direktori tingkat atas (`backend/`, `frontend/`, `simulation/`, `data/`, `data_engineering/`).
 
-- [x] **Interactive Web Dashboard:**
+- [x] **Interactive Web Dashboard & Discrete-Day Playback:**
   - Web UI monokromatik gelap, minimalis, dan elegan tanpa border berlebihan dan tanpa badge status kecil pada card.
+  - **Discrete-Day Process Animation**: Simulasi berjalan langkah demi langkah per hari diskrit dengan timeline dan progress bar.
+  - **Playback Controller (State Pattern)**: Tombol `Start/Play`, `Pause`, `Next Day (Step)`, dan `Reset`.
+  - **Speed Control**: Pilihan kecepatan `1x` (observasi), `2x`, `5x`, dan `Instant` (selesai seketika).
+  - **Store Floor & Cashier Counters**: Visualisasi 4 till counter dengan meteran kelelahan (*fatigue level bar*) dinamis dan counter transaksi kasir.
+  - Visualisasi grafik *Chart.js* yang memanjang titik demi titik secara hidup seiring pergantian hari diskrit.
   - Panel kontrol variabel ABM interaktif (slider durasi, jumlah pembeli, distribusi persona, kelelahan, dan rasio kasir).
-  - Visualisasi grafik *Chart.js* (tren penjualan harian dan distribusi kategori error).
   - Tabel inspeksi transaksi POS dengan filter anomali dan dialog modal detail struk.
   - Download Hub untuk mengekspor data transaksi langsung dari browser.
 

@@ -1,0 +1,89 @@
+.store-floor-section {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+}
+
+.till-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.till-card {
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.till-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.till-number {
+    font-size: 11px;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.till-cashier {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.till-experience {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.till-metrics-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding: 4px 0;
+}
+
+.till-metrics-row span:last-child {
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+}
+
+.fatigue-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fatigue-label-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.fatigue-meter-track {
+    width: 100%;
+    height: 6px;
+    background-color: var(--border-subtle);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.fatigue-meter-fill {
+    height: 100%;
+    width: 0%;
+    background-color: var(--text-primary);
+    transition: width 0.3s ease-out;
+}

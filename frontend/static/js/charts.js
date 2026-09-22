@@ -2,26 +2,20 @@ class ChartManager {
     constructor() {
         this.revenueChart = null;
         this.errorChart = null;
+        this.initRevenueChart();
+        this.initErrorChart();
     }
 
-    renderDailyRevenue(dailyData) {
+    initRevenueChart() {
         const ctx = document.getElementById('dailyRevenueChart').getContext('2d');
-        const labels = dailyData.map(d => d.date);
-        const revenues = dailyData.map(d => d.revenue);
-        const transactions = dailyData.map(d => d.transactions);
-
-        if (this.revenueChart) {
-            this.revenueChart.destroy();
-        }
-
         this.revenueChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: labels,
+                labels: [],
                 datasets: [
                     {
-                        label: 'Revenue (IDR)',
-                        data: revenues,
+                        label: 'Daily Revenue (IDR)',
+                        data: [],
                         borderColor: '#e4e4e7',
                         backgroundColor: 'rgba(228, 228, 231, 0.05)',
                         fill: true,
@@ -30,7 +24,7 @@ class ChartManager {
                     },
                     {
                         label: 'Transactions',
-                        data: transactions,
+                        data: [],
                         borderColor: '#71717a',
                         backgroundColor: 'transparent',
                         borderDash: [4, 4],
@@ -42,6 +36,9 @@ class ChartManager {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                animation: {
+                    duration: 350,
+                },
                 interaction: {
                     mode: 'index',
                     intersect: false,
@@ -79,32 +76,15 @@ class ChartManager {
         });
     }
 
-    renderErrorDistribution(metrics) {
+    initErrorChart() {
         const ctx = document.getElementById('errorDistributionChart').getContext('2d');
-        const labels = ['Double Scan', 'Typo SKU', 'Void Item', 'Walkouts'];
-        const dataValues = [
-            metrics.double_scan_count || 0,
-            metrics.typo_sku_count || 0,
-            metrics.void_count || 0,
-            metrics.customer_abandonments || 0
-        ];
-
-        if (this.errorChart) {
-            this.errorChart.destroy();
-        }
-
         this.errorChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: labels,
+                labels: ['Double Scan', 'Typo SKU', 'Void Item', 'Walkouts'],
                 datasets: [{
-                    data: dataValues,
-                    backgroundColor: [
-                        '#e4e4e7',
-                        '#a1a1aa',
-                        '#71717a',
-                        '#3f3f46'
-                    ],
+                    data: [0, 0, 0, 0],
+                    backgroundColor: ['#e4e4e7', '#a1a1aa', '#71717a', '#3f3f46'],
                     borderWidth: 1,
                     borderColor: '#121316'
                 }]
@@ -112,6 +92,7 @@ class ChartManager {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                animation: { duration: 300 },
                 plugins: {
                     legend: {
                         position: 'bottom',
@@ -120,5 +101,32 @@ class ChartManager {
                 }
             }
         });
+    }
+
+    reset() {
+        if (this.revenueChart) {
+            this.revenueChart.data.labels = [];
+            this.revenueChart.data.datasets[0].data = [];
+            this.revenueChart.data.datasets[1].data = [];
+            this.revenueChart.update();
+        }
+        if (this.errorChart) {
+            this.errorChart.data.datasets[0].data = [0, 0, 0, 0];
+            this.errorChart.update();
+        }
+    }
+
+    appendDailyPoint(daySummary) {
+        if (!this.revenueChart) return;
+        this.revenueChart.data.labels.push(daySummary.date);
+        this.revenueChart.data.datasets[0].data.push(daySummary.revenue);
+        this.revenueChart.data.datasets[1].data.push(daySummary.transactions);
+        this.revenueChart.update();
+    }
+
+    updateErrorDistribution(doubleScan, typo, voidCount, walkouts) {
+        if (!this.errorChart) return;
+        this.errorChart.data.datasets[0].data = [doubleScan, typo, voidCount, walkouts];
+        this.errorChart.update();
     }
 }
