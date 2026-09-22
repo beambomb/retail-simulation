@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail ABM Simulator | Data Engineering Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <header class="app-header">
+            <div class="brand">
+                <h1>Retail ABM Simulator</h1>
+                <p>Discrete-Event Agent Modeling for Data Engineering Pipelines</p>
+            </div>
+            <div class="header-actions">
+                <a href="#export-section" class="btn btn-secondary">Data Export Hub</a>
+                <button id="run-sim-btn" class="btn btn-primary">Run Simulation</button>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <aside class="control-panel">
+                <div class="panel-section">
+                    <h2>Environment & Volume</h2>
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="param-days">Simulation Duration</label>
+                            <span id="val-days" class="param-value">7 Days</span>
+                        </div>
+                        <input type="range" id="param-days" min="1" max="30" value="7" step="1">
+                    </div>
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="param-customers">Customers / Day</label>
+                            <span id="val-customers" class="param-value">120</span>
+                        </div>
+                        <input type="range" id="param-customers" min="20" max="500" value="120" step="10">
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="param-seasonality" checked>
+                        <label for="param-seasonality">Enable Seasonality (Rush hours & Payday)</label>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h2>Customer Personas Distribution</h2>
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="param-quick-grab">Quick Grabber</label>
+                            <span id="val-quick-grab" class="param-value">35%</span>
+                        </div>
+                        <input type="range" id="param-quick-grab" min="5" max="70" value="35" step="5">
+                    </div>
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="param-family">Family Stocker</label>
+                            <span id="val-family" class="param-value">25%</span>
+                        </div>
+                        <input type="range" id="param-family" min="5" max="70" value="25" step="5">
+                    </div>
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="param-budget">Budget Hunter</label>
+                            <span id="val-budget" class="param-value">25%</span>
+                        </div>
+                        <input type="range" id="param-budget" min="5" max="70" value="25" step="5">
+                    </div>
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="param-impulse">Impulse Buyer</label>
+                            <span id="val-impulse" class="param-value">15%</span>
+                        </div>
+                        <input type="range" id="param-impulse" min="5" max="50" value="15" step="5">
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h2>Cashier Workforce & Error Dynamics</h2>
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="param-cashiers">Cashier Till Count</label>
+                            <span id="val-cashiers" class="param-value">4 Staff</span>
+                        </div>
+                        <input type="range" id="param-cashiers" min="2" max="8" value="4" step="1">
+                    </div>
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="param-junior-ratio">Junior Ratio</label>
+                            <span id="val-junior-ratio" class="param-value">50%</span>
+                        </div>
+                        <input type="range" id="param-junior-ratio" min="0" max="100" value="50" step="10">
+                    </div>
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="param-fatigue">Fatigue Sensitivity</label>
+                            <span id="val-fatigue" class="param-value">1.0x</span>
+                        </div>
+                        <input type="range" id="param-fatigue" min="0.2" max="3.0" value="1.0" step="0.2">
+                    </div>
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="param-error-mult">Human Error Multiplier</label>
+                            <span id="val-error-mult" class="param-value">1.0x</span>
+                        </div>
+                        <input type="range" id="param-error-mult" min="0.1" max="5.0" value="1.0" step="0.2">
+                    </div>
+                </div>
+            </aside>
+
+            <div class="main-content">
+                <section class="stats-overview">
+                    <div class="stat-card">
+                        <div class="stat-title">Total Revenue</div>
+                        <div id="stat-revenue" class="stat-value">Rp 0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Total Transactions</div>
+                        <div id="stat-transactions" class="stat-value">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Items Processed</div>
+                        <div id="stat-items" class="stat-value">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Error Incidents</div>
+                        <div id="stat-errors" class="stat-value">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Overall Error Rate</div>
+                        <div id="stat-error-rate" class="stat-value">0.0%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Customer Walkouts</div>
+                        <div id="stat-abandonments" class="stat-value">0</div>
+                    </div>
+                </section>
+
+                <section class="charts-section">
+                    <div class="chart-card">
+                        <div class="card-header">
+                            <h3>Daily Revenue & Transaction Volume</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="dailyRevenueChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <div class="card-header">
+                            <h3>Human Error Category Distribution</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="errorDistributionChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="table-section">
+                    <div class="card-header flex-between">
+                        <h3>Simulated POS Transaction Stream</h3>
+                        <div class="table-controls">
+                            <input type="text" id="tx-search" placeholder="Filter by ID, Cashier, or Customer...">
+                            <select id="error-filter">
+                                <option value="ALL">All Transactions</option>
+                                <option value="ERROR_ONLY">With Human Errors</option>
+                                <option value="CLEAN_ONLY">Clean Transactions</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="transactions-table">
+                            <thead>
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>Timestamp</th>
+                                    <th>Cashier</th>
+                                    <th>Customer</th>
+                                    <th>Payment</th>
+                                    <th>Items</th>
+                                    <th>Total Amount</th>
+                                    <th>Error Flag</th>
+                                    <th>Detail</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactions-tbody">
+                                <tr>
+                                    <td colspan="9" class="empty-state">No simulation data generated yet. Adjust parameters and click "Run Simulation".</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="export-section" class="export-section">
+                    <div class="card-header">
+                        <h3>Data Engineering Artifacts</h3>
+                    </div>
+                    <div class="export-grid">
+                        <div class="export-card">
+                            <div class="export-meta">
+                                <h4>pos_transactions.csv</h4>
+                                <p>Header POS transaction logs containing timestamps, totals, and cashier assignments.</p>
+                            </div>
+                            <a href="/api/download/pos_transactions.csv" class="btn btn-outline" download>Download CSV</a>
+                        </div>
+                        <div class="export-card">
+                            <div class="export-meta">
+                                <h4>pos_transaction_items.csv</h4>
+                                <p>Granular line items containing SKU details, unit prices, voids, and human error annotations.</p>
+                            </div>
+                            <a href="/api/download/pos_transaction_items.csv" class="btn btn-outline" download>Download CSV</a>
+                        </div>
+                        <div class="export-card">
+                            <div class="export-meta">
+                                <h4>cashier_shifts.csv</h4>
+                                <p>Operational shift logs tracking processed transaction volumes, peak fatigue, and errors.</p>
+                            </div>
+                            <a href="/api/download/cashier_shifts.csv" class="btn btn-outline" download>Download CSV</a>
+                        </div>
+                        <div class="export-card">
+                            <div class="export-meta">
+                                <h4>inventory_catalog.csv</h4>
+                                <p>Product master records with barcodes, categories, cost basis, and current shelf stock.</p>
+                            </div>
+                            <a href="/api/download/inventory_catalog.csv" class="btn btn-outline" download>Download CSV</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div id="item-modal" class="modal-backdrop hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 id="modal-title">Transaction Details</h3>
+                <button id="modal-close" class="btn-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <table class="modal-table">
+                    <thead>
+                        <tr>
+                            <th>SKU</th>
+                            <th>Product Name</th>
+                            <th>Qty</th>
+                            <th>Unit Price</th>
+                            <th>Subtotal</th>
+                            <th>Void Status</th>
+                            <th>Error Injection</th>
+                        </tr>
+                    </thead>
+                    <tbody id="modal-items-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/charts.js"></script>
+    <script src="/static/js/modal.js"></script>
+    <script src="/static/js/table.js"></script>
+    <script src="/static/js/controls.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

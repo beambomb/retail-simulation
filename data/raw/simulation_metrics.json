@@ -1,0 +1,28 @@
+{
+  "total_revenue": 19191800.0,
+  "total_transactions": 100,
+  "total_items_sold": 643,
+  "error_transactions": 21,
+  "error_rate_pct": 21.0,
+  "double_scan_count": 1,
+  "typo_sku_count": 12,
+  "void_count": 9,
+  "customer_abandonments": 0,
+  "average_basket_value": 191918.0,
+  "daily_summaries": [
+    {
+      "date": "2026-09-01",
+      "transactions": 50,
+      "revenue": 8921900.0,
+      "errors": 8,
+      "abandonments": 0
+    },
+    {
+      "date": "2026-09-02",
+      "transactions": 50,
+      "revenue": 10269900.0,
+      "errors": 13,
+      "abandonments": 0
+    }
+  ]
+}
